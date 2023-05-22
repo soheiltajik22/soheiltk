@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Soheiltk.de</title>
+    <title>W3.CSS Template</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
@@ -13,7 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="icon" type="image/x-icon" href="favicon-32x32.png"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <style>
       html,
       body,
@@ -26,7 +26,6 @@
         font-family: "Roboto", sans-serif;
       }
     </style>
-    
   </head>
   <body class="w3-light-grey">
     <!-- Page Container -->
@@ -37,15 +36,13 @@
         <div class="w3-third">
           <div class="w3-white w3-text-grey w3-card-4">
             <div class="w3-display-container">
-              <img
-                src="./soheil.jpg"
-                style="width: 100%"
-                alt="Avatar"
-              />
-              <div class="w3-container w3-text-black" style="text-align: center;">
+              <img src="./soheil.jpg" style="width: 100%" alt="Avatar" />
+              <div
+                class="w3-container w3-text-black"
+                style="text-align: center"
+              >
                 <h2>Soheil Tajik</h2>
               </div>
-              
             </div>
             <div class="w3-container">
               <p>
@@ -82,213 +79,307 @@
                   >Skills</b
                 >
               </p>
-              <p onclick="showCertificate('python')" onmouseover="changeColor(this)" onmouseout="resetColor(this)">
-               Python and CertificateContent
+
+              <p
+                onclick="showCertificate('python')"
+                onmouseover="changeColor(this)"
+                onmouseout="resetColor(this)"
+              >
+                Python and CertificateContent
               </p>
-              <div class="w3-light-grey w3-round-xlarge w3-small" onclick="showCertificate('container')" onmouseover="changeColor(this)" onmouseout="resetColor(this)">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width: 70%">
+
+              <div
+                class="w3-light-grey w3-round-xlarge w3-small"
+                onclick="showCertificate('container')"
+                onmouseover="changeColor(this)"
+                onmouseout="resetColor(this)"
+              >
+                <div
+                  class="w3-container w3-center w3-round-xlarge w3-teal"
+                  style="width: 70%"
+                >
                   70%
                 </div>
               </div>
-              
+
               <!-- Popup-Fenster -->
               <div id="certificatePopup" class="w3-modal">
                 <div class="w3-modal-content">
                   <div class="w3-container">
-                    <span onclick="closeCertificate()" class="w3-button w3-display-topright">&times;</span>
+                    <span
+                      onclick="closeCertificate()"
+                      class="w3-button w3-display-topright"
+                      >&times;</span
+                    >
                     <h2 id="certificateTitle"></h2>
                     <div id="certificateContent"></div>
                   </div>
                 </div>
               </div>
-              
+
               <script>
                 function showCertificate(skill) {
-                  if (skill === 'python') {
-                    document.getElementById('certificateTitle').textContent = 'Python Certificate';
-                    document.getElementById('certificateContent').innerHTML = '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
-                    document.getElementById('certificatePopup').style.display = 'block';
-                  } else if (skill === 'container') {
-                    document.getElementById('certificateTitle').textContent = 'Container Certificate';
-                    document.getElementById('certificateContent').innerHTML = '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
-                    document.getElementById('certificatePopup').style.display = 'block';
+                  if (skill === "python") {
+                    document.getElementById("certificateTitle").textContent =
+                      "Python Certificate";
+                    document.getElementById("certificateContent").innerHTML =
+                      '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
+                    document.getElementById("certificatePopup").style.display =
+                      "block";
+                  } else if (skill === "container") {
+                    document.getElementById("certificateTitle").textContent =
+                      "Container Certificate";
+                    document.getElementById("certificateContent").innerHTML =
+                      '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
+                    document.getElementById("certificatePopup").style.display =
+                      "block";
                   }
                 }
-              
+
                 function closeCertificate() {
-                  document.getElementById('certificatePopup').style.display = 'none';
+                  document.getElementById("certificatePopup").style.display =
+                    "none";
                 }
-              
+
                 function changeColor(element) {
-                  element.classList.add('hover-color');
+                  element.classList.add("hover-color");
                 }
-              
+
                 function resetColor(element) {
-                  element.classList.remove('hover-color');
+                  element.classList.remove("hover-color");
                 }
               </script>
-              
+
               <style>
                 .hover-color:hover {
                   background-color: lightblue;
                   cursor: pointer;
                 }
               </style>
-             <p onclick="showCertificate('python')" onmouseover="changeColor(this)" onmouseout="resetColor(this)">
-             Java
-             </p>
-             <div class="w3-light-grey w3-round-xlarge w3-small" onclick="showCertificate('container')" onmouseover="changeColor(this)" onmouseout="resetColor(this)">
-               <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width: 50%">
-                 50%
-               </div>
-             </div>
-             
-             <!-- Popup-Fenster -->
-             <div id="certificatePopup" class="w3-modal">
-               <div class="w3-modal-content">
-                 <div class="w3-container">
-                   <span onclick="closeCertificate()" class="w3-button w3-display-topright">&times;</span>
-                   <h2 id="certificateTitle"></h2>
-                   <div id="certificateContent"></div>
-                 </div>
-               </div>
-             </div>
-             
-             <script>
-               function showCertificate(skill) {
-                 if (skill === 'python') {
-                   document.getElementById('certificateTitle').textContent = 'Python Certificate';
-                   document.getElementById('certificateContent').innerHTML = '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
-                   document.getElementById('certificatePopup').style.display = 'block';
-                 } else if (skill === 'container') {
-                   document.getElementById('certificateTitle').textContent = 'Container Certificate';
-                   document.getElementById('certificateContent').innerHTML = '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
-                   document.getElementById('certificatePopup').style.display = 'block';
-                 }
-               }
-             
-               function closeCertificate() {
-                 document.getElementById('certificatePopup').style.display = 'none';
-               }
-             
-               function changeColor(element) {
-                 element.classList.add('hover-color');
-               }
-             
-               function resetColor(element) {
-                 element.classList.remove('hover-color');
-               }
-             </script>
-             
-             <style>
-               .hover-color:hover {
-                 background-color: lightblue;
-                 cursor: pointer;
-               }
-             </style>
-              <p onclick="showCertificate('python')" onmouseover="changeColor(this)" onmouseout="resetColor(this)">
-                Html & CSS & JavaScript               </p>
-               <div class="w3-light-grey w3-round-xlarge w3-small" onclick="showCertificate('container')" onmouseover="changeColor(this)" onmouseout="resetColor(this)">
-                 <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width: 65%">
-                   65%
-                 </div>
-               </div>
-               
-               <!-- Popup-Fenster -->
-               <div id="certificatePopup" class="w3-modal">
-                 <div class="w3-modal-content">
-                   <div class="w3-container">
-                     <span onclick="closeCertificate()" class="w3-button w3-display-topright">&times;</span>
-                     <h2 id="certificateTitle"></h2>
-                     <div id="certificateContent"></div>
-                   </div>
-                 </div>
-               </div>
-               
-               <script>
-                 function showCertificate(skill) {
-                   if (skill === 'python') {
-                     document.getElementById('certificateTitle').textContent = 'Python Certificate';
-                     document.getElementById('certificateContent').innerHTML = '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
-                     document.getElementById('certificatePopup').style.display = 'block';
-                   } else if (skill === 'container') {
-                     document.getElementById('certificateTitle').textContent = 'Container Certificate';
-                     document.getElementById('certificateContent').innerHTML = '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
-                     document.getElementById('certificatePopup').style.display = 'block';
-                   }
-                 }
-               
-                 function closeCertificate() {
-                   document.getElementById('certificatePopup').style.display = 'none';
-                 }
-               
-                 function changeColor(element) {
-                   element.classList.add('hover-color');
-                 }
-               
-                 function resetColor(element) {
-                   element.classList.remove('hover-color');
-                 }
-               </script>
-               
-               <style>
-                 .hover-color:hover {
-                   background-color: lightblue;
-                   cursor: pointer;
-                 }
-               </style>
-              <p onclick="showCertificate('python')" onmouseover="changeColor(this)" onmouseout="resetColor(this)">
+              <p
+                onclick="showCertificate('python')"
+                onmouseover="changeColor(this)"
+                onmouseout="resetColor(this)"
+              >
+                Java
+              </p>
+              <div
+                class="w3-light-grey w3-round-xlarge w3-small"
+                onclick="showCertificate('container')"
+                onmouseover="changeColor(this)"
+                onmouseout="resetColor(this)"
+              >
+                <div
+                  class="w3-container w3-center w3-round-xlarge w3-teal"
+                  style="width: 50%"
+                >
+                  50%
+                </div>
+              </div>
+
+              <!-- Popup-Fenster -->
+              <div id="certificatePopup" class="w3-modal">
+                <div class="w3-modal-content">
+                  <div class="w3-container">
+                    <span
+                      onclick="closeCertificate()"
+                      class="w3-button w3-display-topright"
+                      >&times;</span
+                    >
+                    <h2 id="certificateTitle"></h2>
+                    <div id="certificateContent"></div>
+                  </div>
+                </div>
+              </div>
+
+              <script>
+                function showCertificate(skill) {
+                  if (skill === "python") {
+                    document.getElementById("certificateTitle").textContent =
+                      "Python Certificate";
+                    document.getElementById("certificateContent").innerHTML =
+                      '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
+                    document.getElementById("certificatePopup").style.display =
+                      "block";
+                  } else if (skill === "container") {
+                    document.getElementById("certificateTitle").textContent =
+                      "Container Certificate";
+                    document.getElementById("certificateContent").innerHTML =
+                      '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
+                    document.getElementById("certificatePopup").style.display =
+                      "block";
+                  }
+                }
+
+                function closeCertificate() {
+                  document.getElementById("certificatePopup").style.display =
+                    "none";
+                }
+
+                function changeColor(element) {
+                  element.classList.add("hover-color");
+                }
+
+                function resetColor(element) {
+                  element.classList.remove("hover-color");
+                }
+              </script>
+
+              <style>
+                .hover-color:hover {
+                  background-color: lightblue;
+                  cursor: pointer;
+                }
+              </style>
+              <p
+                onclick="showCertificate('python')"
+                onmouseover="changeColor(this)"
+                onmouseout="resetColor(this)"
+              >
+                Html & CSS & JavaScript
+              </p>
+              <div
+                class="w3-light-grey w3-round-xlarge w3-small"
+                onclick="showCertificate('container')"
+                onmouseover="changeColor(this)"
+                onmouseout="resetColor(this)"
+              >
+                <div
+                  class="w3-container w3-center w3-round-xlarge w3-teal"
+                  style="width: 65%"
+                >
+                  65%
+                </div>
+              </div>
+
+              <!-- Popup-Fenster -->
+              <div id="certificatePopup" class="w3-modal">
+                <div class="w3-modal-content">
+                  <div class="w3-container">
+                    <span
+                      onclick="closeCertificate()"
+                      class="w3-button w3-display-topright"
+                      >&times;</span
+                    >
+                    <h2 id="certificateTitle"></h2>
+                    <div id="certificateContent"></div>
+                  </div>
+                </div>
+              </div>
+              <script>
+                function showCertificate(skill) {
+                  if (skill === "python") {
+                    document.getElementById("certificateTitle").textContent =
+                      "Python Certificate";
+                    document.getElementById("certificateContent").innerHTML =
+                      '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
+                    document.getElementById("certificatePopup").style.display =
+                      "block";
+                  } else if (skill === "container") {
+                    document.getElementById("certificateTitle").textContent =
+                      "Container Certificate";
+                    document.getElementById("certificateContent").innerHTML =
+                      '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
+                    document.getElementById("certificatePopup").style.display =
+                      "block";
+                  }
+                }
+
+                function closeCertificate() {
+                  document.getElementById("certificatePopup").style.display =
+                    "none";
+                }
+
+                function changeColor(element) {
+                  element.classList.add("hover-color");
+                }
+
+                function resetColor(element) {
+                  element.classList.remove("hover-color");
+                }
+              </script>
+
+              <style>
+                .hover-color:hover {
+                  background-color: lightblue;
+                  cursor: pointer;
+                }
+              </style>
+              <p
+                onclick="showCertificate('python')"
+                onmouseover="changeColor(this)"
+                onmouseout="resetColor(this)"
+              >
                 Database & MySQL
-               </p>
-               <div class="w3-light-grey w3-round-xlarge w3-small" onclick="showCertificate('container')" onmouseover="changeColor(this)" onmouseout="resetColor(this)">
-                 <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width: 60%">
-                   60%
-                 </div>
-               </div>
-               
-               <!-- Popup-Fenster -->
-               <div id="certificatePopup" class="w3-modal">
-                 <div class="w3-modal-content">
-                   <div class="w3-container">
-                     <span onclick="closeCertificate()" class="w3-button w3-display-topright">&times;</span>
-                     <h2 id="certificateTitle"></h2>
-                     <div id="certificateContent"></div>
-                   </div>
-                 </div>
-               </div>
-               
-               <script>
-                 function showCertificate(skill) {
-                   if (skill === 'python') {
-                     document.getElementById('certificateTitle').textContent = 'Python Certificate';
-                     document.getElementById('certificateContent').innerHTML = '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
-                     document.getElementById('certificatePopup').style.display = 'block';
-                   } else if (skill === 'container') {
-                     document.getElementById('certificateTitle').textContent = 'Container Certificate';
-                     document.getElementById('certificateContent').innerHTML = '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
-                     document.getElementById('certificatePopup').style.display = 'block';
-                   }
-                 }
-               
-                 function closeCertificate() {
-                   document.getElementById('certificatePopup').style.display = 'none';
-                 }
-               
-                 function changeColor(element) {
-                   element.classList.add('hover-color');
-                 }
-               
-                 function resetColor(element) {
-                   element.classList.remove('hover-color');
-                 }
-               </script>
-               
-               <style>
-                 .hover-color:hover {
-                   background-color: lightblue;
-                   cursor: pointer;
-                 }
-               </style>
+              </p>
+              <div
+                class="w3-light-grey w3-round-xlarge w3-small"
+                onclick="showCertificate('container')"
+                onmouseover="changeColor(this)"
+                onmouseout="resetColor(this)"
+              >
+                <div
+                  class="w3-container w3-center w3-round-xlarge w3-teal"
+                  style="width: 60%"
+                >
+                  60%
+                </div>
+              </div>
+
+              <!-- Popup-Fenster -->
+              <div id="certificatePopup" class="w3-modal">
+                <div class="w3-modal-content">
+                  <div class="w3-container">
+                    <span
+                      onclick="closeCertificate()"
+                      class="w3-button w3-display-topright"
+                      >&times;</span
+                    >
+                    <h2 id="certificateTitle"></h2>
+                    <div id="certificateContent"></div>
+                  </div>
+                </div>
+              </div>
+
+              <script>
+                function showCertificate(skill) {
+                  if (skill === "python") {
+                    document.getElementById("certificateTitle").textContent =
+                      "Python Certificate";
+                    document.getElementById("certificateContent").innerHTML =
+                      '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
+                    document.getElementById("certificatePopup").style.display =
+                      "block";
+                  } else if (skill === "container") {
+                    document.getElementById("certificateTitle").textContent =
+                      "Container Certificate";
+                    document.getElementById("certificateContent").innerHTML =
+                      '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
+                    document.getElementById("certificatePopup").style.display =
+                      "block";
+                  }
+                }
+
+                function closeCertificate() {
+                  document.getElementById("certificatePopup").style.display =
+                    "none";
+                }
+
+                function changeColor(element) {
+                  element.classList.add("hover-color");
+                }
+
+                function resetColor(element) {
+                  element.classList.remove("hover-color");
+                }
+              </script>
+
+              <style>
+                .hover-color:hover {
+                  background-color: lightblue;
+                  cursor: pointer;
+                }
+              </style>
               <br />
 
               <p class="w3-large w3-text-theme">
@@ -420,14 +511,10 @@
     <footer class="w3-container w3-teal w3-center w3-margin-top">
       <p>Find me on social media.</p>
       <i class="fa fa-facebook-official w3-hover-opacity"></i>
-      <a
-          href="https://www.instagram.com/soheil___tk/?hl=en"
-          target="_blank"
-        ><i class="fa fa-instagram w3-hover-opacity"
-        ></i></a>
-      <i class="fa fa-snapchat w3-hover-opacity"></i>
-      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <a href="https://www.instagram.com/soheil___tk/?hl=en" target="_blank">
+        <i class="fa fa-instagram w3-hover-opacity"></i
+      ></a>
+
       <i class="fa fa-linkedin w3-hover-opacity"></i>
       <p class="w3-small"></p>
       <a
