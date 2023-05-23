@@ -5,8 +5,10 @@
 }
 .fa.fa-linkedin.w3-hover-opacity {
   font-size: 28px; /* Passe die Größe hier an */
+  padding-bottom: 20px;
 }
 .fa.fa-instagram.w3-hover-opacity {
   font-size: 28px; /* Passe die Größe hier an */
   padding-right: 10px;
+  padding-bottom: 20px;
 }
