@@ -28,6 +28,84 @@
         font-family: "Roboto", sans-serif;
       }
     </style>
+    <style>
+      .hover-color {
+        color: rgb(
+          12,
+          35,
+          241
+        ); /* Ändern Sie hier die gewünschte Hover-Farbe */
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      function showCertificate(Kompetenzen) {
+        if (Kompetenzen === "python_and_container") {
+          // Neuer Fall für das kombinierte Zertifikat
+          document.getElementById("certificateTitle").textContent =
+            "Python and Container Certificate";
+          document.getElementById("certificateContent").innerHTML =
+            '<img src="mk.png" alt="Python and Container Certificate" style="width: 100%">' +
+            '<img src="certifikat (1).jpg" alt="Your Second Certificate" style="width: 100%">';
+          document.getElementById("certificatePopup").style.display = "block";
+        } else if (Kompetenzen === "java") {
+          document.getElementById("certificateTitle").textContent =
+            "Java Certificate";
+          document.getElementById("certificateContent").innerHTML =
+            '<img src="unname.jpg" alt="Java Certificate" style="width: 100%">';
+          document.getElementById("certificatePopup").style.display = "block";
+        } else if (Kompetenzen === "Html & CSS & JavaScript") {
+          document.getElementById("certificateTitle").textContent =
+            "Html & CSS & JavaScript Certificate";
+          document.getElementById("certificateContent").innerHTML =
+            '<img src="unname.jpg" alt="Html & CSS & JavaScript Certificate" style="width: 100%">';
+          document.getElementById("certificatePopup").style.display = "block";
+        } else if (Kompetenzen === "MySQL") {
+          document.getElementById("certificateTitle").textContent =
+            "MySQL Certificate";
+          document.getElementById("certificateContent").innerHTML =
+            '<img src="unname.jpg" alt="MySQL Certificate" style="width: 100%">';
+          document.getElementById("certificatePopup").style.display = "block";
+        } else if (Kompetenzen === "Farsi") {
+          document.getElementById("certificateTitle").textContent =
+            "Farsi Certificate";
+          document.getElementById("certificateContent").innerHTML =
+            '<img src="unname.jpg" alt="Farsi Certificate" style="width: 100%">';
+          document.getElementById("certificatePopup").style.display = "block";
+        } else if (Kompetenzen === "Deutsch") {
+          document.getElementById("certificateTitle").textContent =
+            "Deutsch Certificate";
+          document.getElementById("certificateContent").innerHTML =
+            '<img src="certifikat (2).jpg"  alt="Deutsch Certificate" style="width: 100%">';
+          document.getElementById("certificatePopup").style.display = "block";
+        } else if (Kompetenzen === "English") {
+          document.getElementById("certificateTitle").textContent =
+            "English Certificate";
+          document.getElementById("certificateContent").innerHTML =
+            '<img src="unname.jpg" alt="English Certificate" style="width: 100%">';
+          document.getElementById("certificatePopup").style.display = "block";
+        } else if (Kompetenzen === "Microsoft Office") {
+          document.getElementById("certificateTitle").textContent =
+            "Microsoft Office Certificate";
+          document.getElementById("certificateContent").innerHTML =
+            '<img src="unname.jpg" alt="Microsoft Office Certificate" style="width: 100%">';
+          document.getElementById("certificatePopup").style.display = "block";
+        }
+        // Weitere Zertifikate hier hinzufügen
+      }
+
+      function closeCertificate() {
+        document.getElementById("certificatePopup").style.display = "none";
+      }
+
+      function changeColor(element) {
+        element.classList.add("hover-color");
+      }
+
+      function resetColor(element) {
+        element.classList.remove("hover-color");
+      }
+    </script>
   </head>
   <body class="w3-light-grey">
     <!-- Page Container -->
@@ -78,12 +156,12 @@
                   ><i
                     class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"
                   ></i
-                  >Skills</b
+                  >Kompetenzen</b
                 >
               </p>
 
               <p
-                onclick="showCertificate('python')"
+                onclick="showCertificate('python_and_container')"
                 onmouseover="changeColor(this)"
                 onmouseout="resetColor(this)"
               >
@@ -97,7 +175,7 @@
 
               <div
                 class="w3-light-grey w3-round-xlarge w3-small"
-                onclick="showCertificate('container')"
+                onclick="showCertificate('python_and_container')"
                 onmouseover="changeColor(this)"
                 onmouseout="resetColor(this)"
               >
@@ -109,62 +187,8 @@
                 </div>
               </div>
 
-              <!-- Popup-Fenster -->
-              <div id="certificatePopup" class="w3-modal">
-                <div class="w3-modal-content">
-                  <div class="w3-container">
-                    <span
-                      onclick="closeCertificate()"
-                      class="w3-button w3-display-topright"
-                      >&times;</span
-                    >
-                    <h2 id="certificateTitle"></h2>
-                    <div id="certificateContent"></div>
-                  </div>
-                </div>
-              </div>
-
-              <script>
-                function showCertificate(skill) {
-                  if (skill === "python") {
-                    document.getElementById("certificateTitle").textContent =
-                      "Python Certificate";
-                    document.getElementById("certificateContent").innerHTML =
-                      '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
-                    document.getElementById("certificatePopup").style.display =
-                      "block";
-                  } else if (skill === "container") {
-                    document.getElementById("certificateTitle").textContent =
-                      "Container Certificate";
-                    document.getElementById("certificateContent").innerHTML =
-                      '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
-                    document.getElementById("certificatePopup").style.display =
-                      "block";
-                  }
-                }
-
-                function closeCertificate() {
-                  document.getElementById("certificatePopup").style.display =
-                    "none";
-                }
-
-                function changeColor(element) {
-                  element.classList.add("hover-color");
-                }
-
-                function resetColor(element) {
-                  element.classList.remove("hover-color");
-                }
-              </script>
-
-              <style>
-                .hover-color:hover {
-                  background-color: lightblue;
-                  cursor: pointer;
-                }
-              </style>
               <p
-                onclick="showCertificate('python')"
+                onclick="showCertificate('java')"
                 onmouseover="changeColor(this)"
                 onmouseout="resetColor(this)"
               >
@@ -175,19 +199,22 @@
                 ></i>
                 Java
               </p>
+
               <div
                 class="w3-light-grey w3-round-xlarge w3-small"
-                onclick="showCertificate('container')"
+                onclick="showCertificate('java')"
                 onmouseover="changeColor(this)"
                 onmouseout="resetColor(this)"
               >
                 <div
                   class="w3-container w3-center w3-round-xlarge w3-teal"
-                  style="width: 50%"
+                  style="width: 40%"
                 >
-                  50%
+                  40%
                 </div>
               </div>
+
+              <!-- Weitere Zertifikate hier hinzufügen -->
 
               <!-- Popup-Fenster -->
               <div id="certificatePopup" class="w3-modal">
@@ -203,48 +230,8 @@
                   </div>
                 </div>
               </div>
-
-              <script>
-                function showCertificate(skill) {
-                  if (skill === "python") {
-                    document.getElementById("certificateTitle").textContent =
-                      "Python Certificate";
-                    document.getElementById("certificateContent").innerHTML =
-                      '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
-                    document.getElementById("certificatePopup").style.display =
-                      "block";
-                  } else if (skill === "container") {
-                    document.getElementById("certificateTitle").textContent =
-                      "Container Certificate";
-                    document.getElementById("certificateContent").innerHTML =
-                      '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
-                    document.getElementById("certificatePopup").style.display =
-                      "block";
-                  }
-                }
-
-                function closeCertificate() {
-                  document.getElementById("certificatePopup").style.display =
-                    "none";
-                }
-
-                function changeColor(element) {
-                  element.classList.add("hover-color");
-                }
-
-                function resetColor(element) {
-                  element.classList.remove("hover-color");
-                }
-              </script>
-
-              <style>
-                .hover-color:hover {
-                  background-color: lightblue;
-                  cursor: pointer;
-                }
-              </style>
               <p
-                onclick="showCertificate('python')"
+                onclick="showCertificate('Html & CSS & JavaScript')"
                 onmouseover="changeColor(this)"
                 onmouseout="resetColor(this)"
               >
@@ -255,9 +242,10 @@
                 ></i>
                 Html & CSS & JavaScript
               </p>
+
               <div
                 class="w3-light-grey w3-round-xlarge w3-small"
-                onclick="showCertificate('container')"
+                onclick="showCertificate('Html & CSS & JavaScript')"
                 onmouseover="changeColor(this)"
                 onmouseout="resetColor(this)"
               >
@@ -268,62 +256,8 @@
                   65%
                 </div>
               </div>
-
-              <!-- Popup-Fenster -->
-              <div id="certificatePopup" class="w3-modal">
-                <div class="w3-modal-content">
-                  <div class="w3-container">
-                    <span
-                      onclick="closeCertificate()"
-                      class="w3-button w3-display-topright"
-                      >&times;</span
-                    >
-                    <h2 id="certificateTitle"></h2>
-                    <div id="certificateContent"></div>
-                  </div>
-                </div>
-              </div>
-              <script>
-                function showCertificate(skill) {
-                  if (skill === "python") {
-                    document.getElementById("certificateTitle").textContent =
-                      "Python Certificate";
-                    document.getElementById("certificateContent").innerHTML =
-                      '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
-                    document.getElementById("certificatePopup").style.display =
-                      "block";
-                  } else if (skill === "container") {
-                    document.getElementById("certificateTitle").textContent =
-                      "Container Certificate";
-                    document.getElementById("certificateContent").innerHTML =
-                      '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
-                    document.getElementById("certificatePopup").style.display =
-                      "block";
-                  }
-                }
-
-                function closeCertificate() {
-                  document.getElementById("certificatePopup").style.display =
-                    "none";
-                }
-
-                function changeColor(element) {
-                  element.classList.add("hover-color");
-                }
-
-                function resetColor(element) {
-                  element.classList.remove("hover-color");
-                }
-              </script>
-
-              <style>
-                .hover-color:hover {
-                  background-color: lightblue;
-                  cursor: pointer;
-                }
-              </style>
               <p
-                onclick="showCertificate('python')"
+                onclick="showCertificate('MySQL')"
                 onmouseover="changeColor(this)"
                 onmouseout="resetColor(this)"
               >
@@ -332,11 +266,12 @@
                   aria-hidden="true"
                   style="color: rgb(0, 150, 136)"
                 ></i>
-                Database & MySQL
+                MySQL
               </p>
+
               <div
                 class="w3-light-grey w3-round-xlarge w3-small"
-                onclick="showCertificate('container')"
+                onclick="showCertificate('MySQL')"
                 onmouseover="changeColor(this)"
                 onmouseout="resetColor(this)"
               >
@@ -347,70 +282,47 @@
                   60%
                 </div>
               </div>
+              <p
+                onclick="showCertificate('Microsoft Office')"
+                onmouseover="changeColor(this)"
+                onmouseout="resetColor(this)"
+              >
+                <i
+                  class="fa fa-file-pdf-o"
+                  aria-hidden="true"
+                  style="color: rgb(0, 150, 136)"
+                ></i>
+                Microsoft Office
+              </p>
 
-              <!-- Popup-Fenster -->
-              <div id="certificatePopup" class="w3-modal">
-                <div class="w3-modal-content">
-                  <div class="w3-container">
-                    <span
-                      onclick="closeCertificate()"
-                      class="w3-button w3-display-topright"
-                      >&times;</span
-                    >
-                    <h2 id="certificateTitle"></h2>
-                    <div id="certificateContent"></div>
-                  </div>
+              <div
+                class="w3-light-grey w3-round-xlarge w3-small"
+                onclick="showCertificate('Microsoft Office')"
+                onmouseover="changeColor(this)"
+                onmouseout="resetColor(this)"
+              >
+                <div
+                  class="w3-container w3-center w3-round-xlarge w3-teal"
+                  style="width: 40%"
+                >
+                  40%
                 </div>
               </div>
 
-              <script>
-                function showCertificate(skill) {
-                  if (skill === "python") {
-                    document.getElementById("certificateTitle").textContent =
-                      "Python Certificate";
-                    document.getElementById("certificateContent").innerHTML =
-                      '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
-                    document.getElementById("certificatePopup").style.display =
-                      "block";
-                  } else if (skill === "container") {
-                    document.getElementById("certificateTitle").textContent =
-                      "Container Certificate";
-                    document.getElementById("certificateContent").innerHTML =
-                      '<img src="mk.png" alt="Python Certificate" style="width: 100%">';
-                    document.getElementById("certificatePopup").style.display =
-                      "block";
-                  }
-                }
-
-                function closeCertificate() {
-                  document.getElementById("certificatePopup").style.display =
-                    "none";
-                }
-
-                function changeColor(element) {
-                  element.classList.add("hover-color");
-                }
-
-                function resetColor(element) {
-                  element.classList.remove("hover-color");
-                }
-              </script>
-
-              <style>
-                .hover-color:hover {
-                  background-color: lightblue;
-                  cursor: pointer;
-                }
-              </style>
               <br />
 
               <p class="w3-large w3-text-theme">
                 <b
                   ><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i
-                  >Languages</b
+                  >Sprachen</b
                 >
               </p>
-              <p>
+
+              <p
+                onclick="showCertificate('Farsi')"
+                onmouseover="changeColor(this)"
+                onmouseout="resetColor(this)"
+              >
                 <i
                   class="fa fa-file-pdf-o"
                   aria-hidden="true"
@@ -418,13 +330,24 @@
                 ></i>
                 Farsi
               </p>
-              <div class="w3-light-grey w3-round-xlarge">
+
+              <div
+                class="w3-container w3-center w3-round-xlarge w3-teal"
+                style="width: 50%"
+                onclick="showCertificate('Farsi')"
+                onmouseover="changeColor(this)"
+                onmouseout="resetColor(this)"
+              >
                 <div
                   class="w3-round-xlarge w3-teal"
-                  style="height: 24px; width: 100%"
+                  style="height: 24px; width: 75%"
                 ></div>
               </div>
-              <p>
+              <p
+                onclick="showCertificate('Deutsch')"
+                onmouseover="changeColor(this)"
+                onmouseout="resetColor(this)"
+              >
                 <i
                   class="fa fa-file-pdf-o"
                   aria-hidden="true"
@@ -432,13 +355,24 @@
                 ></i>
                 Deutsch
               </p>
-              <div class="w3-light-grey w3-round-xlarge">
+
+              <div
+                class="w3-container w3-center w3-round-xlarge w3-teal"
+                style="width: 50%"
+                onclick="showCertificate('Deutsch')"
+                onmouseover="changeColor(this)"
+                onmouseout="resetColor(this)"
+              >
                 <div
                   class="w3-round-xlarge w3-teal"
                   style="height: 24px; width: 75%"
                 ></div>
               </div>
-              <p>
+              <p
+                onclick="showCertificate('English')"
+                onmouseover="changeColor(this)"
+                onmouseout="resetColor(this)"
+              >
                 <i
                   class="fa fa-file-pdf-o"
                   aria-hidden="true"
@@ -446,10 +380,17 @@
                 ></i>
                 English
               </p>
-              <div class="w3-light-grey w3-round-xlarge">
+
+              <div
+                class="w3-container w3-center w3-round-xlarge w3-teal"
+                style="width: 50%"
+                onclick="showCertificate('English')"
+                onmouseover="changeColor(this)"
+                onmouseout="resetColor(this)"
+              >
                 <div
                   class="w3-round-xlarge w3-teal"
-                  style="height: 24px; width: 70%"
+                  style="height: 24px; width: 75%"
                 ></div>
               </div>
               <br />
@@ -467,7 +408,7 @@
               <i
                 class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"
               ></i
-              >Berufserfahrung
+              >Aktuelle Tätigkeit
             </h2>
             <div class="w3-container">
               <h5 class="w3-opacity">
@@ -500,7 +441,7 @@
               <h5 class="w3-opacity"><b>Webentwickler</b></h5>
               <h6 class="w3-text-teal">
                 <i class="fa fa-calendar fa-fw w3-margin-right"></i>
-                Dec 2023
+                Dec 2022
               </h6>
               <p>
                 Seit Dezember 2023 beschäftige ich mich intensiv mit dem
@@ -526,7 +467,7 @@
                 <b>Python & MySQL</b>
               </h5>
               <h6 class="w3-text-teal">
-                <i class="fa fa-calendar fa-fw w3-margin-right"></i>2024
+                <i class="fa fa-calendar fa-fw w3-margin-right"></i>2023
               </h6>
               <p>
                 Während meiner Umschulung erweitere ich meine Kenntnisse nicht
@@ -623,7 +564,12 @@
         <i class="fa fa-instagram w3-hover-opacity"></i
       ></a>
 
-      <i class="fa fa-linkedin w3-hover-opacity"></i>
+      <a
+        href="https://www.linkedin.com/in/soheil-tajik-76997b272/"
+        target="_blank"
+      >
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+      </a>
       <p class="w3-small"></p>
 
       <!-- End footer -->
