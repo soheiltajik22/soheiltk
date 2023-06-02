@@ -73,10 +73,12 @@
             '<img src="unname.jpg" alt="Farsi Certificate" style="width: 100%">';
           document.getElementById("certificatePopup").style.display = "block";
         } else if (Kompetenzen === "Deutsch") {
+          // Neuer Fall für das kombinierte Zertifikat
           document.getElementById("certificateTitle").textContent =
-            "Deutsch Certificate";
+            "Deutsch and Container Certificate";
           document.getElementById("certificateContent").innerHTML =
-            '<img src="certifikat (2).jpg"  alt="Deutsch Certificate" style="width: 100%">';
+            '<img src="certifikat (2).jpg" alt="Arbitszeugnis and Container Certificate" style="width: 100%">' +
+            '<img src="certifikat (1).jpg" alt="Your Second Certificate" style="width: 100%">';
           document.getElementById("certificatePopup").style.display = "block";
         } else if (Kompetenzen === "English") {
           document.getElementById("certificateTitle").textContent =
