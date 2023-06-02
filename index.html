@@ -90,6 +90,14 @@
           document.getElementById("certificateContent").innerHTML =
             '<img src="unname.jpg" alt="Microsoft Office Certificate" style="width: 100%">';
           document.getElementById("certificatePopup").style.display = "block";
+        } else if (Kompetenzen === "Arbitszeugnis") {
+          // Neuer Fall für das kombinierte Zertifikat
+          document.getElementById("certificateTitle").textContent =
+            "Arbitszeugnis and Container Certificate";
+          document.getElementById("certificateContent").innerHTML =
+            '<img src="certifikat (4).jpg" alt="Arbitszeugnis and Container Certificate" style="width: 100%">' +
+            '<img src="certifikat (5).jpg" alt="Your Second Certificate" style="width: 100%">';
+          document.getElementById("certificatePopup").style.display = "block";
         }
         // Weitere Zertifikate hier hinzufügen
       }
@@ -517,6 +525,18 @@
                 Fachmann macht, der in der Lage ist, innovative Lösungen zu
                 entwickeln und sich flexibel an neue Herausforderungen
                 anzupassen.
+              </p>
+              <p
+                onclick="showCertificate('Arbitszeugnis')"
+                onmouseover="changeColor(this)"
+                onmouseout="resetColor(this)"
+              >
+                <i
+                  class="fa fa-file-pdf-o"
+                  aria-hidden="true"
+                  style="color: rgb(0, 150, 136)"
+                ></i>
+                <b>Arbitszeugnis</b>
               </p>
               <hr />
             </div>
