@@ -17,3 +17,22 @@
   padding-right: 20px;
   padding-top: 10px;
 }
+.email-link {
+  transition: color 0.3s; /* Übergangseffekt für die Farbänderung */
+}
+
+.email-link:hover {
+  color: rgb(12, 35, 241); /* Farbe des Links beim Hover */
+}
+.clickable-div {
+  cursor: pointer;
+  /* Weitere Stiländerungen hier */
+}
+.clickable-div {
+  background-color: #f2f2f2;
+  text-decoration: underline;
+  /* Weitere Stiländerungen hier */
+}
+.underline {
+  text-decoration: underline;
+}
