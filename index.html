@@ -149,6 +149,14 @@
             '<img src="certifikat (4).jpg" alt="Arbitszeugnis and Container Certificate" style="width: 100%">' +
             '<img src="certifikat (5).jpg" alt="Your Second Certificate" style="width: 100%">';
           document.getElementById("certificatePopup").style.display = "block";
+          } else if (Kompetenzen === "Machine Learning") {
+          // Neuer Fall für das kombinierte Zertifikat
+          document.getElementById("certificateTitle").textContent =
+            "Machine Learning and Container Certificate";
+          document.getElementById("certificateContent").innerHTML =
+            '<img src="machin_learning.jpg" alt="Machine Learning Certificate" style="width: 100%">' +
+            '<img src="certifikat (1v.jpg" alt="Your Second Certificate" style="width: 100%">';
+          document.getElementById("certificatePopup").style.display = "block";
         }
         // Weitere Zertifikate hier hinzufügen
       }
@@ -342,6 +350,33 @@
                   60%
                 </div>
               </div>
+
+               <p
+                onclick="showCertificate('Machine Learning')"
+                onmouseover="changeColor(this)"
+                onmouseout="resetColor(this)"
+              >
+                <i
+                  class="fa fa-file-pdf-o"
+                  aria-hidden="true"
+                  style="color: rgb(0, 150, 136)"
+                ></i>
+                <span class="underline">Machine Learning</span>
+              </p>
+              <div
+                class="w3-light-grey w3-round-xlarge w3-small"
+                onclick="showCertificate('Machine Learning')"
+                onmouseover="changeColor(this)"
+                onmouseout="resetColor(this)"
+              >
+                <div
+                  class="w3-container w3-center w3-round-xlarge w3-teal"
+                  style="width: 40%"
+                >
+                  40%
+                </div>
+              </div>
+              
               <p
                 onclick="showCertificate('Microsoft Office')"
                 onmouseover="changeColor(this)"
@@ -363,9 +398,9 @@
               >
                 <div
                   class="w3-container w3-center w3-round-xlarge w3-teal"
-                  style="width: 40%"
+                  style="width: 45%"
                 >
-                  40%
+                  45%
                 </div>
               </div>
 
@@ -544,6 +579,29 @@
               </p>
               <br />
             </div>
+            <div class="w3-container">
+              <h5 class="w3-opacity">
+                <b>Machine Learning</b>
+              </h5>
+              <h6 class="w3-text-teal">
+                <i class="fa fa-calendar fa-fw w3-margin-right"></i>2023
+              </h6>
+              <p>
+                Im Jahr 2023 begann ich meine faszinierende Reise in die Welt
+                des maschinellen Lernens. Als leidenschaftlicher
+                Informatik-Umschüler habe ich mein besonderes Interesse an
+                diesem aufstrebenden Bereich entdeckt. Die Vielfalt und das
+                Potenzial des maschinellen Lernens haben mich von Anfang an
+                fasziniert und mich dazu motiviert, mein Wissen und meine
+                Fähigkeiten kontinuierlich zu erweitern. Trotz der
+                anspruchsvollen Umschulung habe ich mich entschlossen, über den
+                Lehrplan hinauszugehen und mich intensiv mit Online-Kursen und
+                zusätzlichem Material zu beschäftigen. Mein Ziel ist es,
+                fortgeschrittenes Wissen zu erlangen und Algorithmen,
+                Datenanalyse und Modellentwicklung aktiv anzuwenden.
+              </p>
+              <br />
+            </div>
           </div>
 
           <div class="w3-container w3-card w3-white">
@@ -607,23 +665,9 @@
               </p>
               <hr />
             </div>
-            <div class="w3-container">
-              <h5 class="w3-opacity"><b>Tehran-Iran</b></h5>
-              <h6 class="w3-text-teal">
-                <i class="fa fa-calendar fa-fw w3-margin-right"></i>2010
-              </h6>
-              <p>Noch keine Informationen verfügbar</p>
-              <br />
-            </div>
           </div>
-
-          <!-- End Right Column -->
         </div>
-
-        <!-- End Grid -->
       </div>
-
-      <!-- End Page Container -->
     </div>
 
     <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
