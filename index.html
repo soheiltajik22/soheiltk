@@ -164,6 +164,14 @@
             '<img src="Zwischenzeugnis.jpg" alt="Zwischenzeugnis" style="width: 100%">' +
             '<img src="aaaaa.jpg" alt="Your Second Certificate" style="width: 100%">';
           document.getElementById("certificatePopup").style.display = "block";
+        }else if (Kompetenzen === "Machine Learning Projects") {
+          // Neuer Fall für das kombinierte Zertifikat
+          document.getElementById("certificateTitle").textContent = "";
+          document.getElementById("certificateContent").innerHTML =
+            '<img src="sss.jpg" alt="Machine Learning Projects" style="width: 100%">' +
+            '<img src="aaaaa.jpg" alt="Your Second Certificate" style="width: 100%">';
+          document.getElementById("certificatePopup").style.display = "block";
+          // Weitere Zertifikate hier hinzufügen
         }
       }
 
@@ -617,6 +625,18 @@
                 zusätzlichem Material zu beschäftigen. Mein Ziel ist es,
                 fortgeschrittenes Wissen zu erlangen und Algorithmen,
                 Datenanalyse und Modellentwicklung aktiv anzuwenden.
+              </p>
+              <p
+                onclick="showCertificate('Machine Learning Projects')"
+                onmouseover="changeColor(this)"
+                onmouseout="resetColor(this)"
+              >
+                <i
+                  class="fa fa-file-pdf-o"
+                  aria-hidden="true"
+                  style="color: rgb(0, 150, 136)"
+                ></i>
+                <b>Machine Learning Projects</b>
               </p>
               <br />
             </div>
