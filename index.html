@@ -144,7 +144,7 @@
         } else if (Kompetenzen === "Arbitszeugnis") {
           // Neuer Fall für das kombinierte Zertifikat
           document.getElementById("certificateTitle").textContent =
-            "Arbitszeugnis Certificate";
+            "Arbitszeugnis";
           document.getElementById("certificateContent").innerHTML =
             '<img src="certifikat (4).jpg" alt="Arbitszeugnis and Container Certificate" style="width: 100%">' +
             '<img src="certifikat (5).jpg" alt="Your Second Certificate" style="width: 100%">';
@@ -157,8 +157,14 @@
             '<img src="machin_learning.jpg" alt="Machine Learning Certificate" style="width: 100%">' +
             '<img src="certifikat (1v.jpg" alt="Your Second Certificate" style="width: 100%">';
           document.getElementById("certificatePopup").style.display = "block";
+        }  else if (Kompetenzen === "Zwischenzeugnis") {
+          // Neuer Fall für das kombinierte Zertifikat
+          document.getElementById("certificateTitle").textContent = "";
+          document.getElementById("certificateContent").innerHTML =
+            '<img src="Zwischenzeugnis.jpg" alt="Zwischenzeugnis" style="width: 100%">' +
+            '<img src="aaaaa.jpg" alt="Your Second Certificate" style="width: 100%">';
+          document.getElementById("certificatePopup").style.display = "block";
         }
-        // Weitere Zertifikate hier hinzufügen
       }
 
       function closeCertificate() {
@@ -527,6 +533,18 @@
                 meine Fähigkeiten kontinuierlich zu verbessern. Durch meine
                 laufende Umschulung bin ich stets auf dem neuesten Stand der
                 aktuellen Technologien und Best Practices.
+              </p>
+              <p
+                onclick="showCertificate('Zwischenzeugnis')"
+                onmouseover="changeColor(this)"
+                onmouseout="resetColor(this)"
+              >
+                <i
+                  class="fa fa-file-pdf-o"
+                  aria-hidden="true"
+                  style="color: rgb(0, 150, 136)"
+                ></i>
+                <b>Zwischenzeugnis</b>
               </p>
               <hr />
             </div>
