@@ -94,8 +94,26 @@
         cursor: pointer;
       }
     </style>
-    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+   <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
 <script src="https://mediafiles.botpress.cloud/b4bdfdfb-cb08-4a65-9057-e27c485dc7c7/webchat/config.js" defer></script>
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+      "composerPlaceholder": "Chat with bot",
+      "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
+      "botId": "b4bdfdfb-cb08-4a65-9057-e27c485dc7c7",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "b4bdfdfb-cb08-4a65-9057-e27c485dc7c7",
+      "webhookId": "71a37edb-cd71-45ec-861b-3016ee614510",
+      "lazySocket": true,
+      "themeName": "prism",
+      "frontendVersion": "v1",
+      "showPoweredBy": false,
+      "theme": "prism",
+      "themeColor": "#2563eb"
+  });
+</script>
     <script>
       function showCertificate(Kompetenzen) {
         if (Kompetenzen === "python_and_container") {
