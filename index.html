@@ -144,12 +144,13 @@
           document.getElementById("certificateContent").innerHTML =
             '<img src="English.jpg" alt="English Certificate" style="width: 100%">';
           document.getElementById("certificatePopup").style.display = "block";
-        } else if (Kompetenzen === "Microsoft Office") {
+        } else if (Kompetenzen === "Power Platform") {
           document.getElementById("certificateTitle").textContent =
-            "Microsoft Office Certificate";
+            "Power Platform";
           document.getElementById("certificateContent").innerHTML =
-            '<img src="unname.jpg" alt="Microsoft Office Certificate" style="width: 100%">';
+            '<iframe src="Microsoft Power Platform Fundamentals-combined.pdf#zoom=80" alt="Power Platform" style="width: 870px; height: 900px;" ></iframe>';
           document.getElementById("certificatePopup").style.display = "block";
+ 
         } else if (Kompetenzen === "Arbitszeugnis") {
           // Neuer Fall für das kombinierte Zertifikat
           document.getElementById("certificateTitle").textContent =
@@ -401,7 +402,7 @@
               </div>
               
               <p
-                onclick="showCertificate('Microsoft Office')"
+                onclick="showCertificate('Power Platform')"
                 onmouseover="changeColor(this)"
                 onmouseout="resetColor(this)"
               >
@@ -410,12 +411,12 @@
                   aria-hidden="true"
                   style="color: rgb(0, 150, 136)"
                 ></i>
-                <span class="underline">Microsoft PowerPlatform</span>
+                <span class="underline">Power Platform</span>
               </p>
 
               <div
                 class="w3-light-grey w3-round-xlarge w3-small"
-                onclick="showCertificate('Microsoft Office')"
+                onclick="showCertificate('Power Platform')"
                 onmouseover="changeColor(this)"
                 onmouseout="resetColor(this)"
               >
