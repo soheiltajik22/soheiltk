@@ -28,3 +28,17 @@
     <img src="sss.svg" alt="ticket-button" width="30">
 </button>
 
+<div id="ticket-button"></div>
+    <script>
+    fetch(".html")
+    .then(response => response.text())
+    .then(html => {
+        document.getElementById("ticket-button").innerHTML = html;
+
+        // Jetzt den Event-Listener setzen
+        document.getElementById("ticket-button").addEventListener("click", function () {
+            window.open("https://forms.office.com/e/4yv8pCH887", "_blank");
+        });
+    })
+    .catch(error => console.error("Fehler beim Laden des Buttons:", error));
+</script>
