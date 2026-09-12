@@ -1,7 +1,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
 :root{
-  --bg:        #f8f9ff;
+  --bg:        #ffffff;
   --glass:     rgba(255,255,255,0.85);
   --glass-b:   rgba(255,255,255,0.95);
   --border:    rgba(139,92,246,0.12);
@@ -362,14 +362,52 @@ footer span{color:var(--purple-lt)}
 .reveal-d2{transition-delay:.2s}
 .reveal-d3{transition-delay:.3s}
 
+/* ── MOBILE AVATAR (hidden on desktop) ── */
+.hero-avatar-mobile{display:none}
+.hero-top-row{display:contents} /* transparent on desktop — h1 renders normally */
+
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr;gap:2rem}
-  .hero-right-col{display:none}
+  /* Nav */
+  nav{
+    padding:0 1.2rem;
+    height:56px;
+  }
+  .nav-logo{font-size:1rem}
+  nav .nav-links,.nav-btn{display:none}
+
+  /* Hero */
+  .hero-inner{
+    grid-template-columns:1fr;
+    gap:1.5rem;
+    padding-top:1rem;
+  }
+  .hero-right-col{display:none} /* full image hidden; avatar used instead */
+
+  /* Profile row: avatar left, name right */
+  .hero-top-row{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    margin-bottom:.5rem;
+  }
+  .hero-avatar-mobile{
+    display:block;
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    object-position:55% 5%;
+    flex-shrink:0;
+    border:3px solid rgba(124,58,237,0.35);
+    box-shadow:0 4px 18px rgba(124,58,237,0.2);
+  }
+  .hero-name{font-size:clamp(1.6rem,8vw,2.2rem)}
+
+  /* Layout grids */
   .bento{grid-template-columns:1fr;grid-template-rows:auto}
   .b1,.b2,.b3,.b4{grid-column:1/-1;grid-row:auto}
   .skills-grid,.proj-grid,.edu-grid,.contact-wrap,.lang-grid{grid-template-columns:1fr}
   .cert-grid{grid-template-columns:1fr 1fr}
   .certs-card{grid-column:1/-1}
-  nav .nav-links,.nav-btn{display:none}
 }
