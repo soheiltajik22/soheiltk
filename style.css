@@ -366,6 +366,10 @@ footer span{color:var(--purple-lt)}
 .hero-avatar-mobile{display:none}
 .hero-top-row{display:contents} /* transparent on desktop — h1 renders normally */
 
+/* ── HAMBURGER (hidden on desktop) ── */
+.hamburger{display:none}
+.mobile-menu{display:none}
+
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
   /* Nav */
@@ -376,13 +380,53 @@ footer span{color:var(--purple-lt)}
   .nav-logo{font-size:1rem}
   nav .nav-links,.nav-btn{display:none}
 
-  /* Hero */
+  /* Hamburger button */
+  .hamburger{
+    display:flex;flex-direction:column;justify-content:center;gap:5px;
+    width:38px;height:38px;background:none;border:none;cursor:pointer;padding:6px;
+    border-radius:8px;
+  }
+  .hamburger span{
+    display:block;height:2px;width:22px;
+    background:var(--purple-lt);border-radius:2px;
+    transition:all .3s;
+  }
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamburger.open span:nth-child(2){opacity:0}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* Mobile menu dropdown */
+  .mobile-menu{
+    display:none;flex-direction:column;
+    position:fixed;top:56px;left:0;right:0;z-index:99;
+    background:rgba(248,249,255,0.97);
+    backdrop-filter:blur(20px);
+    border-bottom:1px solid rgba(139,92,246,0.15);
+    padding:.5rem 1.2rem 1rem;
+    box-shadow:0 8px 32px rgba(0,0,0,0.08);
+  }
+  .mobile-menu.open{display:flex}
+  .mm-link{
+    padding:.75rem 0;font-size:.95rem;font-weight:600;
+    color:var(--muted);text-decoration:none;
+    border-bottom:1px solid rgba(139,92,246,0.08);
+  }
+  .mm-link:last-child{border-bottom:none}
+  .mm-cta{
+    margin-top:.5rem;padding:.6rem 1rem;text-align:center;
+    background:linear-gradient(135deg,var(--purple),var(--blue));
+    color:#fff!important;border-radius:8px;
+  }
+
+  /* Hero — less top space */
   .hero-inner{
     grid-template-columns:1fr;
-    gap:1.5rem;
-    padding-top:1rem;
+    gap:1rem;
+    padding-top:.5rem;
+    min-height:auto;
   }
-  .hero-right-col{display:none} /* full image hidden; avatar used instead */
+  #hero{padding-top:70px;min-height:auto}
+  .hero-right-col{display:none}
 
   /* Profile row: avatar left, name right */
   .hero-top-row{
