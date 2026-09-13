@@ -404,6 +404,11 @@ footer span{color:var(--purple-lt)}
   }
   .hero-name{font-size:clamp(1.6rem,8vw,2.2rem)}
 
+  /* Reduce horizontal padding on mobile */
+  section{padding:60px 1rem}
+  #hero{padding:64px 1rem 0}
+  .hero-inner{gap:1rem}
+
   /* Layout grids */
   .bento{grid-template-columns:1fr;grid-template-rows:auto}
   .b1,.b2,.b3,.b4{grid-column:1/-1;grid-row:auto}
