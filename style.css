@@ -393,8 +393,8 @@ footer span{color:var(--purple-lt)}
   }
   .hero-avatar-mobile{
     display:block;
-    width:130px;
-    height:130px;
+    width:78px;
+    height:78px;
     border-radius:50%;
     object-fit:cover;
     object-position:55% 5%;
